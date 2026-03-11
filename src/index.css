@@ -1,0 +1,70 @@
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* WhatsApp Web-inspired palette */
+  --header-bg: #f0f2f5;
+  --sidebar-bg: #ffffff;
+  --content-bg: #efeae2;
+  --content-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4d4d4' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --bubble-incoming: #ffffff;
+  --bubble-outgoing: #dcf8c6;
+  --bubble-shadow: rgba(0, 0, 0, 0.06);
+  --accent: #25d366;
+  --accent-hover: #20bd5a;
+  --text-primary: #111b21;
+  --text-secondary: #667781;
+  --text-muted: #8696a0;
+  --border-light: #e9edef;
+  --selected-bg: #f0f2f5;
+  --unread-badge: #25d366;
+  --avatar-bg: #dfe5e7;
+  --input-bg: #f0f2f5;
+  --header-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-bg: #202c33;
+    --sidebar-bg: #111b21;
+    --content-bg: #0b141a;
+    --content-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23555555' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    --bubble-incoming: #202c33;
+    --bubble-outgoing: #005c4b;
+    --text-primary: #e9edef;
+    --text-secondary: #8696a0;
+    --text-muted: #667781;
+    --border-light: #2a3942;
+    --selected-bg: #2a3942;
+    --avatar-bg: #2a3942;
+    --input-bg: #2a3942;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--content-bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
